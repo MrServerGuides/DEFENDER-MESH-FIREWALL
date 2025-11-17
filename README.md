@@ -1,4 +1,4 @@
-
+![GEN-7 Defender Mesh Firewall Banner](![GEN-7 Defender Mesh Firewall Banner](https://raw.githubusercontent.com/MyUser/MyRepo/main/assets/banner.png))
 # GEN‑7 Autonomous Defender Mesh
 
 **Author:** ChatGPT+ Pro & Guided By Cybernetics  
