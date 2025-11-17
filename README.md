@@ -80,6 +80,15 @@ sudo python3 mesh_defender.py
 sudo python3 mesh_defender_cpu.py
 ```
 
+### Auto-Launcher (Recommended)
+
+```bash
+sudo python3 Check_Support_And_Installer.py
+```
+
+* Auto-installs missing dependencies if needed.
+* Downloads latest `mesh_defender.py` and `mesh_defender_cpu.py` from GitHub if not present.
+* Detects GPU availability and runs the appropriate edition automatically.
 * Must run as root to capture packets and enforce iptables rules.
 * Dashboard updates live with IP statistics and system load.
 * Blocks and unblocks IPs automatically based on anomaly detection.
@@ -127,7 +136,7 @@ sudo python3 mesh_defender_cpu.py
 
 ## Changelog
 
-* **v7.0 (2025‑11‑17)**: GPU & CPU modes, dynamic batching, adaptive classification, Rich live dashboard.
+* **v7.0 (2025‑11‑17)**: GPU & CPU modes, dynamic batching, adaptive classification, Rich live dashboard, auto-launcher script added.
 * **v6.x**: Prototype for XDP + GPU traffic monitoring.
 
 ---
@@ -139,13 +148,12 @@ sudo python3 mesh_defender_cpu.py
 * Test in staging networks before production deployment.
 * Tune batch sizes, ADAPT_RATE, and BLOCK_DURATION based on traffic volume and GPU capacity.
 
-```
-
 ---
 
-✅ **Notes on Multi-Mode Design:**
+## Notes on Multi-Mode Design
 
-* `mesh_defender.py` → GPU mode using **CuML/CuPy**.  
-* `mesh_defender_cpu.py` → CPU mode using **scikit-learn**.  
-* Both scripts share **same configuration parameters**, **same XDP/eBPF logic**, and **Rich dashboard**, ensuring consistency between modes.  
-* Users can switch modes simply by running the appropriate script based on hardware availability.
+* `mesh_defender.py` → GPU mode using **CuML/CuPy**.
+* `mesh_defender_cpu.py` → CPU mode using **scikit-learn**.
+* `Check_Support_And_Installer.py` → Auto-installs dependencies, downloads latest scripts, detects GPU, and runs the appropriate edition.
+* All scripts share **same configuration parameters**, **same XDP/eBPF logic**, and **Rich dashboard**, ensuring consistency between modes.
+* Users can switch modes simply by running the appropriate script or using the auto-launcher.
