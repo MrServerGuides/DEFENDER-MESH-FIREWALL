@@ -149,5 +149,3 @@ sudo python3 mesh_defender_cpu.py
 * `mesh_defender_cpu.py` → CPU mode using **scikit-learn**.  
 * Both scripts share **same configuration parameters**, **same XDP/eBPF logic**, and **Rich dashboard**, ensuring consistency between modes.  
 * Users can switch modes simply by running the appropriate script based on hardware availability.
-
-I can also draft a **small unified launcher** that auto-detects GPU availability and chooses the correct mode (`GPU` or `CPU`) for seamless operation.  
