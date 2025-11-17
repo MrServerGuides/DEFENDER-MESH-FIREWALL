@@ -2,6 +2,8 @@
 
 # GEN‑7 Autonomous Defender Mesh
 
+Anti DDOS & Stress Testing
+
 **Author:** ChatGPT+ Pro & Guided By Cybernetics  
 **Version:** 7.0  
 **Build Date:** 2025‑11‑17  
